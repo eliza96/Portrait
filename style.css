@@ -643,3 +643,62 @@ figcaption{
     box-shadow: 6px 1px 17px 0px #000;
     position: absolute;
 }
+body {
+    background: linear-gradient(180deg, #610404 0%, #981f04 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mmd_portrait:hover {
+    transform: scale(1.05);
+}
+
+.mmd_portrait:hover figcaption {
+    display: block;
+    opacity: 1;
+    bottom: 0.3rem;
+    z-index: 104;
+    left: 85px;
+}
+
+.mmd_portrait {
+
+    position: relative;
+    background: #EBA83A;
+    overflow: hidden;
+    width: 354px;
+    height: 354px;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+    cursor: pointer;
+}
+
+.star {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: starAnimation 2s infinite linear;
+}
+
+@keyframes starAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
